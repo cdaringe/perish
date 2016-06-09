@@ -1,6 +1,6 @@
 {
   "name": "perish",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "tiny module to log and exit on uncaughtException and unhandledRejection events",
   "main": "src/index.js",
   "scripts": {
