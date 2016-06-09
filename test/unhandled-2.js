@@ -1,0 +1,2 @@
+require('../')
+Promise.reject(null)
