@@ -45,7 +45,7 @@
     "minami": "^1.1.1",
     "nyc": "^6.4.4",
     "shizam": "0.0.5",
-    "standard": "^7.1.2",
+    "standard": "^8.4.0",
     "standard-format": "^2.2.1",
     "tape": "^4.5.1"
   }
