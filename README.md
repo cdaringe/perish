@@ -39,7 +39,6 @@ Promise.reject(new Error('bananas'))
 run `node handled.js` and:
 
 ```js
-bananas
 Error: bananas
     at Object.<anonymous> (/some/path/handled.js:2:16)
     at Module._compile (module.js:541:32)
@@ -54,3 +53,11 @@ Error: bananas
 ```
 
 nothin' too fancy!
+
+## api
+
+```js
+const perish = require('perish')
+perish.printStacktrace // default true. set to false to console.error error message only
+perish.fail // @private. this is the error handler
+```
