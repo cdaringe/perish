@@ -69,3 +69,17 @@ test('unhandled-4, validate _no_ stacktrace', (t) => {
     t.end()
   })
 })
+
+test('unhandled-5, adds message when stacktrace does not include it', (t) => {
+  t.plan(3)
+  const uhp = path.resolve(__dirname, 'unhandled-5.js')
+  const r = cp.spawn('node', [uhp])
+  let errMsg = ''
+  r.stderr.on('data', (err) => { errMsg += err.toString() })
+  r.on('exit', (code) => {
+    t.ok(errMsg.match(/unhandled-5-message-logged/), 'messaged logged in stacktrace mode')
+    t.ok(errMsg.match(/bogus/), 'stacktrace logged in stacktrace mode')
+    t.equals(code, 1, 'exit code 1')
+    t.end()
+  })
+})
