@@ -1,5 +1,7 @@
 # perish
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/cdaringe/perish.svg)](https://greenkeeper.io/)
+
 [ ![Codeship Status for cdaringe/perish](https://codeship.com/projects/4ce16a00-107f-0134-12ce-2a42c1ba701a/status?branch=master)](https://codeship.com/projects/157001) [![Coverage Status](https://coveralls.io/repos/github/cdaringe/perish/badge.svg?branch=master)](https://coveralls.io/github/cdaringe/perish?branch=master) ![](https://img.shields.io/badge/standardjs-%E2%9C%93-brightgreen.svg)
 
 tiny module to log and exit on uncaughtException and unhandledRejection events
