@@ -40,12 +40,12 @@
   ],
   "devDependencies": {
     "coveralls": "^2.11.9",
-    "gh-pages": "^0.12.0",
+    "gh-pages": "^1.0.0",
     "jsdoc": "^3.4.0",
     "minami": "^1.1.1",
     "nyc": "^10.0.0",
     "shizam": "0.0.5",
-    "standard": "^9.0.0",
+    "standard": "^10.0.2",
     "standard-format": "^2.2.1",
     "tape": "^4.5.1"
   }
