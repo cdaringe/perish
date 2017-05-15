@@ -44,7 +44,7 @@
     "jsdoc": "^3.4.0",
     "minami": "^1.1.1",
     "nyc": "^10.0.0",
-    "shizam": "0.0.5",
+    "shizam": "0.0.7",
     "standard": "^9.0.0",
     "standard-format": "^2.2.1",
     "tape": "^4.5.1"
