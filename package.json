@@ -1,6 +1,6 @@
 {
   "name": "perish",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "tiny module to log and exit on uncaughtException and unhandledRejection events",
   "main": "src/index.js",
   "scripts": {
@@ -14,7 +14,7 @@
     "publish-patch": "npm run preversion && npm version patch && git push origin master --tags && npm publish",
     "publish-minor": "npm run preversion && npm version minor && git push origin master --tags && npm publish",
     "publish-major": "npm run preversion && npm version major && git push origin master --tags && npm publish",
-    "test": "nyc --reporter=lcov --check-coverage --functions=90 --branches=90 node test/"
+    "test": "nyc --reporter=lcov --check-coverage --functions=90 --branches=80 node test/"
   },
   "repository": {
     "type": "git",

@@ -4,7 +4,7 @@ var perish = {
   fail (err) {
     if (!(err instanceof Error)) console.warn('warning: unhandled error is not an `Error` instance. consider looking into it.')
     if (err === undefined || err === null) err = new Error('empty, unhandled error detected')
-    var toLog = perish.printStacktrace ? (err && err.stack) : (err && err.message)
+    var toLog = perish.printStacktrace ? (err && err.stack || err.message) : (err && err.message)
     try {
       // stacktrace _usually_ embeds the messgae. if it doesn't, log it
       if (
