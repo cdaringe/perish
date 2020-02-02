@@ -38,17 +38,17 @@
     "test"
   ],
   "devDependencies": {
-    "@typescript-eslint/eslint-plugin": "^2.18.0",
-    "@typescript-eslint/parser": "^2.18.0",
-    "coveralls": "^2.11.9",
-    "gh-pages": "^1.0.0",
-    "husky": "^4.2.1",
-    "lint-staged": "^10.0.7",
-    "nyc": "^10.0.0",
-    "prettier-standard": "^16.1.0",
-    "standardx": "^5.0.0",
-    "tape": "^4.5.1",
-    "typescript": "^3.7.5"
+    "@typescript-eslint/eslint-plugin": "2.18.0",
+    "@typescript-eslint/parser": "2.18.0",
+    "coveralls": "2.13.3",
+    "gh-pages": "1.2.0",
+    "husky": "4.2.1",
+    "lint-staged": "10.0.7",
+    "nyc": "10.3.2",
+    "prettier-standard": "16.1.0",
+    "standardx": "5.0.0",
+    "tape": "4.13.0",
+    "typescript": "3.7.5"
   },
   "husky": {
     "hooks": {
