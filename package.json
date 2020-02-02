@@ -3,7 +3,9 @@
   "version": "1.0.2",
   "description": "tiny module to log and exit on uncaughtException and unhandledRejection events",
   "main": "dist/index.js",
-  "files": ["dist"],
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "preversion": "git checkout master && git pull && npm ls",
     "publish-patch": "tsc && npm run preversion && npm version patch && git push origin master --tags && npm publish",
