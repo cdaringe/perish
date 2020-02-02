@@ -1,0 +1,13 @@
+{
+  "compilerOptions": {
+    "declaration": true,
+    "declarationMap": true,
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "module": "commonjs",
+    "outDir": "./dist",
+    "sourceMap": true,
+    "strict": true,
+    "target": "es5"
+  }
+}

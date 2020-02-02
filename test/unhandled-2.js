@@ -1,2 +1,2 @@
 require('../')
-Promise.reject(null)
+Promise.reject(null) // eslint-disable-line

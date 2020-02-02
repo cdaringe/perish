@@ -2,19 +2,15 @@
   "name": "perish",
   "version": "1.0.2",
   "description": "tiny module to log and exit on uncaughtException and unhandledRejection events",
-  "main": "src/index.js",
+  "main": "dist/index.js",
+  "files": ["dist"],
   "scripts": {
-    "lint": "standard \"src/**/*.js\" \"test/**/*.js\"",
-    "lintfix": "standard-format -w",
-    "validate": "npm ls",
-    "preversion": "git checkout master && git pull && npm ls",
-    "docs": "mkdir -p docs && jsdoc -c .jsdoc.json src/",
-    "deploy-docs": "gh-pages -d docs && rm -rf docs",
-    "postpublish": "npm run docs && npm run deploy-docs",
-    "publish-patch": "npm run preversion && npm version patch && git push origin master --tags && npm publish",
-    "publish-minor": "npm run preversion && npm version minor && git push origin master --tags && npm publish",
-    "publish-major": "npm run preversion && npm version major && git push origin master --tags && npm publish",
-    "test": "nyc --reporter=lcov --check-coverage --functions=90 --branches=80 node test/"
+    "publish-patch": "tsc && npm run preversion && npm version patch && git push origin master --tags && npm publish",
+    "publish-minor": "tsc && npm run preversion && npm version minor && git push origin master --tags && npm publish",
+    "publish-major": "tsc && npm run preversion && npm version major && git push origin master --tags && npm publish",
+    "test": "nyc --reporter=lcov --check-coverage --functions=90 --branches=80 node test/",
+    "format": "prettier-standard '{src,test,scripts}/**/*.{js,jsx,ts,tsx}'",
+    "lint": "standardx '{src,test,scripts}/**/*.{js,jsx,ts,tsx}' && prettier-standard '{src,test,scripts}/**/*.{js,jsx,ts,tsx}' --check"
   },
   "repository": {
     "type": "git",
@@ -39,12 +35,42 @@
     "test"
   ],
   "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^2.18.0",
+    "@typescript-eslint/parser": "^2.18.0",
     "coveralls": "^2.11.9",
     "gh-pages": "^1.0.0",
-    "jsdoc": "^3.4.0",
-    "minami": "^1.1.1",
+    "husky": "^4.2.1",
+    "lint-staged": "^10.0.7",
     "nyc": "^10.0.0",
-    "standard": "^10.0.2",
-    "tape": "^4.5.1"
+    "prettier-standard": "^16.1.0",
+    "standardx": "^5.0.0",
+    "tape": "^4.5.1",
+    "typescript": "^3.7.5"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "{src,test,scripts}/**/*.{js,jsx,ts,tsx}": [
+      "yarn format",
+      "yarn lint",
+      "git add"
+    ]
+  },
+  "eslintConfig": {
+    "rules": {
+      "no-unused-vars": 0
+    }
+  },
+  "standardx": {
+    "parser": "@typescript-eslint/parser",
+    "plugins": [
+      "@typescript-eslint/eslint-plugin"
+    ],
+    "ignore": [
+      "**/*.d.ts"
+    ]
   }
 }
