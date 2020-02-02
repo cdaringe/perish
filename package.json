@@ -41,7 +41,7 @@
     "@typescript-eslint/eslint-plugin": "2.18.0",
     "@typescript-eslint/parser": "2.18.0",
     "coveralls": "2.13.3",
-    "gh-pages": "1.2.0",
+    "gh-pages": "2.2.0",
     "husky": "4.2.1",
     "lint-staged": "10.0.7",
     "nyc": "10.3.2",
