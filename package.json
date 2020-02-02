@@ -7,7 +7,7 @@
     "dist"
   ],
   "scripts": {
-    "preversion": "git checkout master && git pull && npm ls",
+    "preversion": "git checkout master && git pull",
     "publish-patch": "tsc && npm run preversion && npm version patch && git push origin master --tags && npm publish",
     "publish-minor": "tsc && npm run preversion && npm version minor && git push origin master --tags && npm publish",
     "publish-major": "tsc && npm run preversion && npm version major && git push origin master --tags && npm publish",
