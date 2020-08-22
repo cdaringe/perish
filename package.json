@@ -45,7 +45,7 @@
     "husky": "4.2.1",
     "lint-staged": "10.0.7",
     "nyc": "10.3.2",
-    "prettier-standard": "16.1.0",
+    "prettier-standard": "16.4.1",
     "standardx": "5.0.0",
     "tape": "4.13.0",
     "typescript": "3.7.5"
